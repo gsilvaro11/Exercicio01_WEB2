@@ -3,25 +3,29 @@
     <head>
         <meta charset='UTF-8'>
         <title> Exericio 01 </title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-                         
-        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">                        
+        
     </head>
 
-    <body>
-              
+    <body>              
         <div class="container bordar" style="margin-top: 10em;">            
             <div class="row">
                 <div class="col-5">
                     <h3 class="mt-4 mb-4">Exercicio 01:</h3>                    
                     <input class="form-control mb-3" type="text" id="envia_nome" placeholder="Nome">
-                    <input class="form-control" type="text" id="envia_preco" placeholder="Preço">
+                    <input class="form-control mb-3" type="text" id="envia_preco" placeholder="Preço">
+                    
+                    <div class="" style="display: none;" id="atualiza_produtos">
+                        <input class="form-control mb-3" type="text" id="atualiza_nome" placeholder="Novo nome">
+                        <input class="form-control" type="text" id="atualiza_preco" placeholder="Novo preço">
+                        <input type="button" class="btn btn-dark mt-3" value="Enviar" onclick="atualiza_produtos(valida_atualização())">
+                    </div>                    
 
                     <div class="row">
                         <div class="col mt-4">
                             <input type="button" class="btn btn-dark mb-3" value="Adicionar" onclick="adiciona_produtos(valida_produtos())">                                                      
-                            <input type="button" class="btn btn-dark mb-3" value="Remover" onclick="remove_produtos(valida_produtos())">
-                            <input type="button" class="btn btn-dark mb-3" value="Atualizar">  
+                            <input type="button" class="btn btn-dark mb-3" value="Remover" onclick="remove_produtos(valida_produtos())">                                                     
+                            <input type="button" class="btn btn-dark mb-3" value="Atualizar" onclick="muda_display()">  
                         </div>
                     </div> 
                      
